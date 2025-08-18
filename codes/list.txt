@@ -1,1 +1,4 @@
-
+code for diffrentially expressed protein (DEP) analysis 
+code for co-expression network analysis
+code for the AHNAK validation analysis 
+code for literature search
