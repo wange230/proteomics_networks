@@ -1,0 +1,6 @@
+
+The code to implement the analysis for Baysian network can be found here: 
+https://github.com/mw201608/BayesianNetwork
+
+The orignal software package "RIMBANet" (Reconstructing Integrative Molecular Bayesian Network) can be found here:
+https://labs.icahn.mssm.edu/zhulab/?s=rimbanet
