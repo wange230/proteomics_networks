@@ -1,4 +1,9 @@
-code for diffrentially expressed protein (DEP) analysis 
-code for co-expression network analysis
-code for the AHNAK validation analysis 
-code for literature search
+DEP_analysis: code for diffrentially expressed protein (DEP) analysis 
+MEGENA_network: code for co-expression network analysis
+AHNAK.proteomics: code for the AHNAK validation analysis 
+KDP_literature_search: code for literature search
+Baysian_network: code for Bayesian causal network analysis
+GSE254205_snRNA: code for snRNA analysis
+for_rebuttal: code for rebuttal
+Integration: code for data integration
+mouse_5xFAD: code for mouse model of AD related
