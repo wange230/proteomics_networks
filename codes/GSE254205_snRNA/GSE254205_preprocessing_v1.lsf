@@ -1,0 +1,16 @@
+#BSUB -L /bin/bash
+#BSUB -n 1 
+#BSUB -R span[ptile=1]
+#BSUB -R rusage[mem=20000]
+#BSUB -J integr
+#BSUB -o integr.out
+#BSUB -e integr.err
+#BSUB -q premium
+#BSUB -P acc_adineto
+#BSUB -W 144:00
+cd /sc/arion/projects/adineto/apoe.GSE254205/seurats
+ 
+ml R/4.3.0
+R CMD BATCH GSE254205_preprocessing_v1.R
+
+
