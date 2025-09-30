@@ -1,0 +1,14 @@
+#BSUB -L /bin/bash
+#BSUB -n 2 
+#BSUB -R span[ptile=2]
+#BSUB -R rusage[mem=8000]
+#BSUB -J preservaton0001
+#BSUB -o preservation0001.out
+#BSUB -e preservation0001.err
+#BSUB -q premium
+#BSUB -P acc_adineto
+#BSUB -W 138:00
+cd /sc/hydra/projects/zhangb03a/shared/DET_WINA_MEGENA/PHG_MEGENA_module_conservation 
+module load R
+R CMD BATCH example_test_MSBB_12_16_2019_pro200.R 
+

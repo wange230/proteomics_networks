@@ -1,0 +1,14 @@
+#BSUB -L /bin/bash
+#BSUB -n 12
+#BSUB -R span[ptile=12]
+#BSUB -R rusage[mem=8000]
+#BSUB -J MSBB.PHG.proteomics.PMI_Age_race_sex_batch_adj_forMEGENA.tsv
+#BSUB -o MSBB.PHG.proteomics.PMI_Age_race_sex_batch_adj_forMEGENA.tsv.out
+#BSUB -e MSBB.PHG.proteomics.PMI_Age_race_sex_batch_adj_forMEGENA.tsv.err
+#BSUB -q premium
+#BSUB -P acc_adineto
+#BSUB -W 138:00
+cd /sc/hydra/projects/zhangb03a/shared/DET_WINA_MEGENA/Scripts_06/
+module load R
+R CMD BATCH MSBB.PHG.proteomics.PMI_Age_race_sex_batch_adj_forMEGENA.R
+

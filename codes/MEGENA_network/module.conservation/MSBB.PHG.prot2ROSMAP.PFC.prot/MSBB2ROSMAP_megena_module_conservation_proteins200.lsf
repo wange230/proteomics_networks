@@ -1,0 +1,14 @@
+#BSUB -L /bin/bash
+#BSUB -n 2 
+#BSUB -R span[ptile=2]
+#BSUB -R rusage[mem=8000]
+#BSUB -J preservato2
+#BSUB -o preservatio2.out
+#BSUB -e preservatio2.err
+#BSUB -q premium
+#BSUB -P acc_adineto
+#BSUB -W 138:00
+cd /sc/hydra/projects/zhangb03a/shared/DET_WINA_MEGENA/PHG_ROSMAP_proteinMEGENA_module_conservation/MSBB_ROSMAP_conservation 
+module load R
+R CMD BATCH example_test_MSBB2ROSMAP_module_conservation_03_24_2020_proteins200.R 
+

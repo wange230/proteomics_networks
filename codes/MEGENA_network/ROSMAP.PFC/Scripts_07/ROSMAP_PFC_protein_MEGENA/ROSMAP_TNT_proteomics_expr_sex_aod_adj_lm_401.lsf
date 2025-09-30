@@ -1,0 +1,14 @@
+#BSUB -L /bin/bash
+#BSUB -n 12
+#BSUB -R span[ptile=12]
+#BSUB -R rusage[mem=8000]
+#BSUB -J ROSMAP_TNT_proteomics_expr_sex_aod_adj_lm_401.tsv
+#BSUB -o ROSMAP_TNT_proteomics_expr_sex_aod_adj_lm_401.tsv.out
+#BSUB -e ROSMAP_TNT_proteomics_expr_sex_aod_adj_lm_401.tsv.err
+#BSUB -q premium
+#BSUB -P acc_adineto
+#BSUB -W 138:00
+cd /sc/hydra/projects/zhangb03a/shared/DET_WINA_MEGENA/Scripts_07/
+module load R
+R CMD BATCH ROSMAP_TNT_proteomics_expr_sex_aod_adj_lm_401.R
+

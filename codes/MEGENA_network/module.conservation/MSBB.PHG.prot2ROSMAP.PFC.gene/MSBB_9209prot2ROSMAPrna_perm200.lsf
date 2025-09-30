@@ -1,0 +1,13 @@
+#BSUB -L /bin/bash
+#BSUB -n 10 
+#BSUB -R span[ptile=10]
+#BSUB -R rusage[mem=8000]
+#BSUB -J preservation
+#BSUB -o preservation.out
+#BSUB -e preservation.err
+#BSUB -q premium
+#BSUB -P acc_adineto
+#BSUB -W 144:00
+cd /sc/arion/projects/zhangb03a/shared/DET_WINA_MEGENA/MSBB_protein_to_ROSMAP_mRNA_preservation 
+module load R
+R CMD BATCH MSBB_9209prot2ROSMAPrna_perm200.R 
